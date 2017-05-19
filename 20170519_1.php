@@ -24,7 +24,7 @@ if ($p == 0){
                 else if($p == 4){
                     $divided = $x % $y;
                     echo $divided;
-                }
+                } 
 
 //        $col = "1 '$p' 2";
 //        $minus = $x - $y;
