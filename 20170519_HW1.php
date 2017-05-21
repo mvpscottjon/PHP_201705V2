@@ -31,10 +31,26 @@ $y = $_GET['y'];
     ?>">
     <select name="chosen" id="chosen">
 
-        <option  value="0" >+</option>
-        <option  value="1">-</option>
-        <option  value="2">*</option>
-        <option  value="3"">/</option>
+        <option  value="0" <?php
+        if ($p ==0){
+            echo "selected";
+        }
+        ?>>+</option>
+        <option  value="1" <?php
+        if ($p ==1){
+            echo "selected";
+        }
+        ?>>-</option>
+        <option  value="2" <?php
+        if ($p ==2){
+            echo "selected";
+        }
+        ?>>*</option>
+        <option  value="3"" <?php
+        if ($p ==3){
+            echo "selected";
+        }
+        ?>>/</option>
     </select>
 
     <input type="text" name="y" id="y" value="<?php
@@ -67,13 +83,7 @@ $y = $_GET['y'];
 
     ?>
 </form>
-<script>
 
-    window.onload = function(e){document.getElementById("chosen").value = <?php
-        echo $p;
-        ?>  }
-
-</script>
 
 <!---->
 <!--<input type="text" name="x" id="x">-->
