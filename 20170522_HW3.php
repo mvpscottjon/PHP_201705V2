@@ -11,7 +11,7 @@ for ($i=0;$i<6;$i++) {
     $temp = rand(0,5);
     $isRepeat = false;
 //    $poker[$i] = $temp;
-        for ($j=5;$j>0;$j--){
+        for ($j=5;$j>=0;$j--){
 
 
             if($final[$j] == $temp ){
@@ -22,7 +22,7 @@ for ($i=0;$i<6;$i++) {
                 $i--;
                 continue;
             }else{
-                $final[] = $temp;
+                $final[$j] = $temp;
             }
 
         }
