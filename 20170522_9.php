@@ -8,10 +8,10 @@ for(;$i<15;){
 
 ?>
 
-
-
-<script>
-for(var i=0;i<10;i++){
-    echo $i . '<br>';
-}
-</script>
+<!---->
+<!---->
+<!--<script>-->
+<!--for(var i=0;i<10;i++){-->
+<!--    echo $i . '<br>';-->
+<!--}-->
+<!--</script>-->
