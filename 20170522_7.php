@@ -11,7 +11,7 @@
 
 
 
-//and or 練習
+//*****and or 練習
 
 //$a = 10;
 //$b = 2;
@@ -22,7 +22,7 @@
 //}
 
 
-//switch
+//****switch用法
 
 $month = rand(1,12);
 echo "$month<br>";

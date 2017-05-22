@@ -1,5 +1,6 @@
 <?php
 
+//*****while 用法
 $sum=0; $i=1;$a=10;
 
     while($i<=$a){

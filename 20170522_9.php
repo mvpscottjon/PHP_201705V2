@@ -1,5 +1,8 @@
 <?php
 
+//******for的用法
+
+
 $i=0;
 for(test1();;test2()){
     echo $i++ . '<br>';
