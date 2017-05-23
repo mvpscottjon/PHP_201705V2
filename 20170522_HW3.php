@@ -1,25 +1,21 @@
 <?php
 //*****骰子 陣列 0-5  value 0-5;
-$poker = array();
+
 $final = array();
-for ($i=0;$i<6;$i++) {
-    $temp = rand(0,5);
-    $isRepeat = false;
-//    $poker[$i] = $temp;
+for($i=0;$i<6;$i++){
     for ($j=5;$j>=0;$j--){
-        if($final[$j] == $temp ){
-            $isRepeat = true;
-            break;
-        }
-        if($isRepeat){
-            $i--;
-            continue;
-        }else{
-            $final[$j] = $temp;
-        }
-    }
-    echo $final[$i];
+       $temp=rand(0,5);
+
+       $change = $final[5];
+        $final[$temp]=$change;
+        $final[$j                  ] = $final[$temp];
+
+
+
+
+
 }
+echo $final[$j];}
 //
 //for($i=0;$i<51;$i++){
 //

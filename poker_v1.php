@@ -13,11 +13,12 @@ for($i=0;$i<10;$i++){
             $isRepeat = true;
             break;
         }
-    } if ($isRepeat){
+    }
+    if ($isRepeat){
         $i--;
         continue;  //沒有這個continue就會重複　　為什麼？？
     }else{
-    $poker[] = $temp;
+    $poker[$i] = $temp;
     }
     echo $poker[$i].'<br>';
 }
