@@ -1,17 +1,17 @@
 <?php
 
-//do while
+//撲克牌發牌 即為數字不能重複(do while版本)
 $poker = array();
 
-for($i=0;$i<51;$i++){
+for($i=0;$i<10;$i++){
 
 
    do{
-       $temp[]=rand(0,51);
-
        $isrepeat = false;
+       $temp=rand(0,9);
        for($j=0;$j<$i;$j++){
-           if($poker == $temp){
+
+           if($poker[$j] == $temp){
                $isrepeat = true;
                break;
            }

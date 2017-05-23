@@ -1,23 +1,23 @@
 <?php
 
-//i--
+//撲克牌發牌 即為數字不能重複(i--版本)
 $poker = array();
 
-for($i=0;$i<51;$i++){
-    $temp[]=rand(0,51);
+for($i=0;$i<10;$i++){
 
-    $isrepeat = false;
+    $temp=rand(0,9);
+    $isRepeat = false;
     for($j=0;$j<$i;$j++){
-        if($poker == $temp){
-            $isrepeat = true;
+
+        if($poker[$j] == $temp){
+            $isRepeat = true;
             break;
         }
-    } if ()
-
-
-
-
-
-
+    } if ($isRepeat){
+        $i--;
+        continue;  //沒有這個continue就會重複　　為什麼？？
+    }else{
+    $poker[] = $temp;
+    }
     echo $poker[$i].'<br>';
 }
