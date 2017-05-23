@@ -18,20 +18,21 @@
 
 
 
-        for($k=1;$k<$i;$k++){
+        for($k=2;$k<$i;$k++){
 
-            $isCross=false;
+            $isCross=true;
 
             $r =$i%$k;
 
-            if ($r !==0 ){
-                $isCross= true;
+            if ($r ==0 ){
+                $isCross= false;
               break;
-            } else{$isCross = false;}
+            } else{$isCross = true;}
 
 
 
         }
+
 
         if ($isCross){
             echo '<td bgcolor="#ffb6c1">';
@@ -41,7 +42,7 @@
             echo '</td>';
 
         }else {
-            echo '<td bgcolor="white">';
+            echo '<td bgcolor="blue">';
 
             echo "$i";
 
@@ -69,18 +70,18 @@
 
 </table>
 
-
+<!---->
 <?php
-
-echo '<br>';
-for($i=0;$i<30;$i++){
-for($k=1;$k<=$i;$k++){
-$r=$i%$k;
-if($r==0){
-$r++;
-}
-
-echo $i;
+//
+//echo '<br>';
+//for($i=0;$i<30;$i++){
+//for($k=1;$k<=$i;$k++){
+//$r=$i%$k;
+//if($r==0){
+//$r++;
+//}
+//
+//echo $i;
 
 //
 //if(count($r)<3){
@@ -88,7 +89,7 @@ echo $i;
 //echo  "$i".'<br>';}
 
 
-}
-}
+//}
+//}
 
 ?>
