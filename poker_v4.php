@@ -1,5 +1,5 @@
 <?php
-//撲克
+//撲克...
 $poker = range(0,51);
 shuffle($poker);
 
