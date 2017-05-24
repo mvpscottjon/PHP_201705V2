@@ -20,8 +20,7 @@
 
         for($k=2;$k<$i;$k++){
 
-            $isCross=true;
-
+            $isCross=true;  ///假定 預設不宣告時變數都為false  在此將變數isCross指定是true
             $r =$i%$k;
 
             if ($r ==0 ){
