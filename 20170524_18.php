@@ -7,13 +7,20 @@ $gender = $_REQUEST['gender'];
 $play= $_REQUEST['play'];
 $memo= $_REQUEST['memo'];
 
+//帳號
 echo 'account:'.$account.'<br>';
-echo $pwd.'<br>';
-echo $birthday.'<br>';
-echo $area.'<br>';
-echo $gender.'<br>';
+//密碼
+echo 'pwd:'.$pwd.'<br>';
+//生日
+echo 'bd:'.$birthday.'<br>';
+//地區
+echo 'area:'.$area.'<br>';
+//單選性別
+echo 'gen:'.$gender.'<br>';
+//所有多選的play
 foreach ($play as $v){
-    echo $v.'<br>';
+    echo     'play:'.$v.'<br>';
 }
-echo $memo;
+//記事
+echo    'memo:'.$memo;
 

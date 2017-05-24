@@ -1,4 +1,5 @@
-
+<html>
+<body>
 <form action="20170524_18.php" method="get">
     Name:<input type="text" name="account"><br>
     Password:<input type="password" name="pwd"><br>
@@ -10,11 +11,12 @@
         <option value="410">中屯區</option>
         <option value="411">東屯區</option>
     </select>
-
+///單選radio name要一樣，可群組化
     <input type="radio" name="gender" value="0">female
     <input type="radio" name="gender" value="1" checked>male
     <br>
-    <input type="checkbox" name="play[]" value="0">打0
+    ////多選的name使其變為陣列
+    <input type="checkbox" name="play[]" value="0"checked>打0
     <input type="checkbox" name="play[]" value="1">打1
     <input type="checkbox" name="play[]" value="2">打2
     <br>
@@ -25,7 +27,10 @@
     Memo:<br><textarea name="memo"></textarea>
     <br>
     Fileupload:<input type="file" name="fileupload">
+    <br>
     <input type="submit" value="sent">
 
 
 </form>
+</body>
+</html>
