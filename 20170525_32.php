@@ -30,6 +30,7 @@ if($imgX > $imgY){
 //    $imgSrcW = $imgSrcH*400/200;
 }
 
+
 imagecopyresized ( $imgDst , $imgSrc ,
 0 , 0 , 0, 0 ,
 $imgDX, $imgDY , $imgSrcW,$imgSrcH);
