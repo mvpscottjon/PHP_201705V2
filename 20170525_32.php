@@ -3,24 +3,48 @@ $img = imagecreatefromjpeg ( "./fileupload/pika.jpg");
 
 $img2 = imagecreatefrompng ( "./fileupload/pika2.png");
 
+$imgSrc=$img2;
 
-//$red=imagecolorallocate ( $img , 255, 0, 0);
 
-$imgD =imagecreate(400,200);
+$imgDst =imagecreate(400,200);
 
-//
-//
-//bool imagecopyresized ( resource $dst_image , resource $src_image ,
-//int $dst_x , int $dst_y , int $src_x , int $src_y ,
-//int $dst_w , int $dst_h , int $src_w , int $src_h )
+$imgX = imagesx ( $imgSrc );
+
+$imgY = imagesy ( $imgSrc );
+
+$imgDX = imagesx ( $imgDst );
+
+$imgDY = imagesy ( $imgDst );
+
+
+if($imgX > $imgY){
+    $imgSrcW = $imgDX;
+//    $imgSrcW = 400;
+    $imgSrcH = $imgSrcW*$imgDY/$imgSrcW;
+//    $imgSrcH = $imgSrcW*200/$imgSrcW;
+
+}else{
+    $imgSrcH = $imgDY;
+//    $imgSrcH = 200;
+    $imgSrcW = $imgSrcH*$imgDX/$imgDY;
+//    $imgSrcW = $imgSrcH*400/200;
+}
+
+imagecopyresized ( $imgDst , $imgSrc ,
+0 , 0 , 0, 0 ,
+$imgDX, $imgDY , $imgSrcW,$imgSrcH);
+
+//imagecopyresized ( $imgDst , $imgSrc ,
+//    0 , 0 , 400, 400 ,
+//    400 , 200 , $imgSrcW,$imgSrcH);
 
 
 
 
 header('Content-Type:image/jpeg');
 
-imagejpeg($imgD);
+imagejpeg($imgDst);
 
 
-imagedestroy($img);
-imagedestroy($img2);
+imagedestroy($imgSrc);
+imagedestroy($imgDst);

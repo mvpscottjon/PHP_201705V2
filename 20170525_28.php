@@ -1,11 +1,11 @@
 <?php
 
 //
-//直接讀檔案成陣列
-$file = file("test.txt");
-foreach ($file as $line){
-    echo "==>$line";
-}
+////直接讀檔案成陣列
+//$file = file("test.txt");
+//foreach ($file as $line){
+//    echo "==>$line";
+//}
 
 //
 ////字串
@@ -24,24 +24,34 @@ $data = file("excel.csv");
         <th>f3</th>
         <th>f4</th>
 
-        <?php
-        $data = file("excel.csv");
-
-
-
-        foreach ($data as $line){
-            $fields = explode(",","$line");
-            echo "<tr>";
-            foreach ($fields as $field){
-                echo "<td>$field</td>";
-            }
-            echo "</tr>";
-
-        }
-        ?>
-
-
     </tr>
+    <?php
+    $data = file("excel.csv");
 
+                foreach ($data as $row){
+                    $columns= explode ( ",", "$row"  );
+                    echo "<tr>";
+                    foreach ($columns as $good )
+                                        {  echo "<td>{$good}</td>";
+
+                    }
+                    echo "</tr>";
+
+                }
+
+
+
+
+////老師版本
+//    foreach ($data as $line){
+//        $fields = explode(",","$line");
+//        echo "<tr>";
+//        foreach ($fields as $field){
+//            echo "<td>$field</td>";
+//        }
+//        echo "</tr>";
+//
+//    }
+    ?>
 
 </table>
