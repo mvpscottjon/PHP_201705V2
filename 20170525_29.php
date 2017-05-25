@@ -10,6 +10,7 @@ $rate =$_GET['rate'];
 $image = imagecreate("400","40");
 
 
+
 $yellow =imagecolorallocate ( $image , 255, 255 , 0);
 
 $red = imagecolorallocate ( $image , 255, 0, 0);

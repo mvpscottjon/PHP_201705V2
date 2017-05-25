@@ -31,6 +31,7 @@ if($imgX > $imgY){
 }
 
 
+
 imagecopyresized ( $imgDst , $imgSrc ,
 0 , 0 , 0, 0 ,
 $imgDX, $imgDY , $imgSrcW,$imgSrcH);

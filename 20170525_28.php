@@ -24,6 +24,7 @@ $data = file("excel.csv");
         <th>f3</th>
         <th>f4</th>
 
+
     </tr>
     <?php
     $data = file("excel.csv");

@@ -12,4 +12,5 @@ imagejpeg($img);
 
 
 
+
 imagedestroy($img);
