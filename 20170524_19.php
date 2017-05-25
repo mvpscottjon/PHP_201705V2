@@ -1,14 +1,23 @@
 <form method="post" action="20170524_21.php" enctype="multipart/form-data">
     上傳檔案:<br>
     <input type="file" name="upload" ><br>
-    <input type="submit" value="upload" target="_blank">
+    <input type="submit" value="upload" >
 </form>
+
 
 <form>
     <?php
 
     date_default_timezone_set('Asia/Taipei');
-        $dirname = ".";
+        if(isset($_FILES['upload'])){
+            serchfile();
+        }else {echo 'upload fail';}
+
+
+serchfile();
+
+     function serchfile(){
+    $dirname = ".";
         if(isset($_GET['dirname'])){
             $dirname=$_GET['dirname'];
             if(isset($_GET['filename'])){
@@ -18,7 +27,7 @@
 
         }
 
-
+     }
 
     ?>
     檔案目錄搜尋:
