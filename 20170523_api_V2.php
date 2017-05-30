@@ -2,6 +2,9 @@
 
 ////*********API練習
 
+
+//身分證類別
+
 class TWId{
 
     function __construct($id){
@@ -19,7 +22,7 @@ class TWId{
     function checkID($twid){
 
         function twid(){
-            $twid=func_get_args();
+            $twid=func_get_args();  ////這行是甚麼意思?
             if(preg_match("/^[A-Z][12][0-9]{8}$/","$twid")){
                 $n12s = substr($twid,0,1);
 //      echo $n12s;
@@ -66,6 +69,8 @@ class TWId{
 
 
 
+
+//BIKE類別
 class bike{
     protected $speed = 0;
 
@@ -96,6 +101,8 @@ class bike{
     }
 }
 
+
+///機車繼承BIKE類別
 
 class scooter extends bike {
 
