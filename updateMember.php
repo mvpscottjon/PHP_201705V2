@@ -26,4 +26,4 @@ $PDO->query($sql);
 //$db->query($sql);
 
 //echo 'ok';
-header('Location:20170531_38.php');
+header('Location:HW8_20170531_PDO.php');

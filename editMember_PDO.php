@@ -1,14 +1,15 @@
 <?php
-        include 'sqlPdo.php';
         session_start();  ///記得加這行
+        include 'sqlPdo.php';
+
         if(!isset($_GET['editid']))
-            header('Location:20170531_38_php');
+            header('Location:HW8_20170531_PDO.php');
             $editid = $_GET['editid'];
 
             $_SESSION['editid']=$editid;   ///為了update 故需記住id的session
             $sql= "select * from member where id = {$editid}";
 
-            $PDO = new PDO($dns,$username,$passwd,$options);
+            $PDO = new PDO($dsn,$username,$passwd,$options);
 
             $rs = $PDO->query($sql);
 

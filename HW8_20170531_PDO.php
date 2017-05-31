@@ -1,10 +1,23 @@
 <?php
-
+//
 include 'sqlPdo.php';
 
 
+//需先new　一個PDO
 $PDO = @new PDO($dsn, $username, $passwd, $options);
 
+//如果有delete的id　則執行這個if
+if (isset($_GET['delid'])) {
+    $delid = $_GET['delid'];
+    $sql = "delete from member where id={$delid}";
+
+    $PDO->query($sql);
+}
+
+
+
+
+///SHOW全部的select
 $sql = 'select * from member';
 
 $rs = $PDO->query($sql);
@@ -13,13 +26,9 @@ $rs = $PDO->query($sql);
 //$db = @new mysqli('127.0.0.1','root'
 //    ,'root','iii');
 
-
 //
-if (isset($_GET['delid'])){
-    $delid =$_GET['delid'];
-    $sql = "delete from member where id={$delid}";
+////
 
-   $PDO->query($sql);
 
 
 //    $db->query($sql);
@@ -53,7 +62,7 @@ if (isset($_GET['delid'])){
             echo "<td>{$row->password}</td>";
             echo "<td>{$row->realname}</td>";
             echo "<td><a href='?delid={$row->id}'>Del</a></td>";
-            echo "<td><a href='editMember.php?editid={$row->id}'>Edit</a></td>";
+            echo "<td><a href='editMember_PDO.php?editid={$row->id}'>Edit</a></td>";
             echo '</tr>';
         }
 
@@ -62,3 +71,4 @@ if (isset($_GET['delid'])){
 
 
 </table>
+
