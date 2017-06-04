@@ -17,7 +17,7 @@ $rs = $db->query($sql);
 ?>
 
 
-<a href="addMember.php">New</a>
+<a href="addMemberV2.php">New</a>
 <table width="100%" border="1">
     <tr>
         <td>id</td>
