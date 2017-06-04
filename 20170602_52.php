@@ -1,3 +1,5 @@
+<!--////****從addMemberV2.php接過來-->
+
 <?php
  if(!isset($_GET['a'])){
      echo 'no type account'; die();
@@ -11,7 +13,6 @@
     $stmt->execute([$account]);
 
     if ($stmt->rowCount()>0){
-        echo 'account exist';
-    }else { echo 'you can use it';}
-
+        echo '0';
+    }else { echo '1';}
 

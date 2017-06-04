@@ -5,7 +5,7 @@
 
     $sql= 'SELECT * from member ';
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([]);
+    $stmt->execute();
 
 echo '<talbe>';
     while ($obj=$stmt->fetchObject()){
